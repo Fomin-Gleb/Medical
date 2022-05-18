@@ -1,0 +1,400 @@
+@import "mixins.scss";
+@import "templates.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+  margin-bottom: 150px;
+  .header-bg {
+    position: absolute;
+    top: 150px;
+  }
+  nav {
+    padding-top: 50px;
+    display: flex;
+    margin-bottom: 100px;
+    .nav-menu {
+      display: flex;
+      justify-content: end;
+      flex-grow: 1;
+      &_element {
+        padding-top: 13px;
+        a {
+          padding: 10px 20px;
+          border: 1px solid rgba($color: #000000, $alpha: 0);
+          margin: 0 10px;
+          @include font-set(600, 18px, 23px, #1f1534);
+          opacity: 0.6;
+          //   transition: .3s;
+        }
+        a:hover {
+          border: 1px solid rgba($color: #000000, $alpha: 0.2);
+          border-radius: 5px;
+          color: black;
+          font-weight: 600;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    &-content {
+      padding-top: 110px;
+      h1 {
+        @include font-set(700, 48px, 56px, #000000);
+        width: 80%;
+        margin-bottom: 30px;
+      }
+      p {
+        @include font-set(300, 21px, 32px, #7d7987);
+        width: 80%;
+        margin-bottom: 30px;
+      }
+      a {
+        padding: 15px 40px;
+        background-color: #458ff6;
+        border-radius: 30px;
+        @include font-set(500, 18px, 60px, #ffffff);
+        transition: 0.3s;
+      }
+      a:hover {
+        background-color: palevioletred;
+      }
+    }
+  }
+}
+section {
+  position: relative;
+  .section-services_bg {
+    position: absolute;
+    top: 250px;
+  }
+  .section-services_second-bg {
+    position: absolute;
+    top: 550px;
+    right: 250px;
+  }
+  .services {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 150px;
+    h2 {
+      @include font-set(700, 36px, 56px, #000000);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      @include font-set(400, 18px, 30px, #7d7987);
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 80px;
+    }
+    &_svg {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      cursor: pointer;
+      &_element {
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        max-width: 30%;
+        border: 1px solid rgba($color: #000000, $alpha: 0);
+        margin-bottom: 40px;
+        box-shadow: 0px 20px 40px rgb(0 0 0 / 25%);
+        transition: 0.3s;
+        h2 {
+          @include font-set(700, 24px, 56px, #000000);
+          text-align: left;
+          margin-bottom: 5px;
+        }
+        p {
+          @include font-set(400, 16px, 28px, #7d7987);
+          text-align: left;
+          margin: 0 0 10px 0;
+        }
+        &-svg {
+          margin-bottom: 10px;
+        }
+      }
+      &_element:hover {
+        box-shadow: 0px 20px 40px rgb(0 0 0 / 50%);
+      }
+    }
+    &_button {
+      text-align: center;
+      margin: 30px 0 50px 0;
+      a {
+        padding: 15px 35px;
+        border-radius: 20px;
+        border: 1px solid #458ff6;
+        @include font-set(700, 18px, 60px, #458ff6);
+        transition: 0.3s;
+      }
+      a:hover {
+        color: white;
+        background-color: #458ff6;
+      }
+    }
+  }
+
+  .second-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 150px;
+    &_content {
+      padding-top: 110px;
+      h1 {
+        @include font-set(700, 48px, 56px, #000000);
+        margin-bottom: 30px;
+      }
+      p {
+        @include font-set(300, 21px, 32px, #7d7987);
+        margin-bottom: 30px;
+      }
+      a {
+        padding: 15px 40px;
+        border: 1px solid #458ff6;
+        border-radius: 30px;
+        @include font-set(500, 18px, 60px, #458ff6);
+        transition: 0.3s;
+      }
+      a:hover {
+        background-color: palevioletred;
+        color: white;
+        border: 1px solid rgba($color: #000000, $alpha: 0);
+      }
+      &-svg {
+        margin-bottom: 30px;
+      }
+    }
+    &_img {
+      margin-right: 100px;
+    }
+  }
+  .thrid-banner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    &_content {
+      padding-top: 110px;
+      h1 {
+        @include font-set(700, 48px, 56px, #000000);
+        width: 80%;
+        margin-bottom: 30px;
+      }
+      p {
+        @include font-set(300, 21px, 32px, #7d7987);
+        width: 80%;
+        margin-bottom: 30px;
+      }
+      a {
+        padding: 15px 40px;
+        border: 1px solid #458ff6;
+        border-radius: 30px;
+        @include font-set(500, 18px, 60px, #458ff6);
+        transition: 0.3s;
+      }
+      a:hover {
+        background-color: palevioletred;
+        color: white;
+        border: 1px solid rgba($color: #000000, $alpha: 0);
+      }
+      &-svg {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .review {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(
+      to top right,
+      rgb(25, 98, 255),
+      rgb(139, 185, 255)
+    );
+    border-radius: 15px;
+    text-align: center;
+    padding: 80px;
+    margin-bottom: 200px;
+    h2 {
+      @include font-set(700, 36px, 48px, #ffffff);
+      margin-bottom: 30px;
+    }
+    &_svg {
+      margin-bottom: 30px;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      align-items: center;
+      &_element {
+        width: 49%;
+        img {
+          border-radius: 50%;
+        }
+        span {
+          @include font-set(700, 22px, 48px, #ffffff);
+        }
+        p {
+          @include font-set(400, 18px, 24px, #ffffff);
+        }
+      }
+    }
+    &_bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .review-second_bg {
+    position: absolute;
+    top: 300px;
+    left: 220px;
+  }
+  .latest-article {
+    position: relative;
+    z-index: 2;
+    > h2 {
+      text-align: center;
+      @include font-set(700, 36px, 56px, #000000);
+      margin-bottom: 20px;
+    }
+    &_svg {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    margin-bottom: 150px;
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      &_element {
+        position: relative;
+        margin-bottom: 50px;
+        background-color: #ffffff;
+        transition: 0.3s;
+        cursor: pointer;
+        img {
+          width: 100%;
+        }
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 20px 40px rgb(0 0 0 / 25%);
+        width: 30%;
+        .descrip {
+          padding: 20px;
+          h2 {
+            margin-bottom: 10px;
+            @include font-set(700, 21px, 32px, #000000);
+          }
+          p {
+            margin-bottom: 30px;
+            @include font-set(400, 16px, 28px, #7d7987);
+          }
+          a {
+            @include font-set(600, 17px, 28px, #4089ed);
+          }
+        }
+        a {
+          display: block;
+          position: absolute;
+          bottom: 10px;
+        }
+      }
+      &_element:hover {
+        box-shadow: 0px 20px 40px rgb(0 0 0 / 50%);
+      }
+    }
+    &_button {
+      margin-bottom: 150px;
+      text-align: center;
+      a {
+        padding: 15px 40px;
+        border: 1px solid #458ff6;
+        border-radius: 30px;
+        @include font-set(500, 18px, 60px, #458ff6);
+        transition: 0.3s;
+      }
+      a:hover {
+        background-color: palevioletred;
+        color: white;
+        border: 1px solid rgba($color: #000000, $alpha: 0);
+      }
+    }
+  }
+  .latest-article_bg {
+    position: absolute;
+    top: 90px;
+    left: 250px;
+  }
+  .latest-article_second-bg {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+  }
+  .latest-article_thrid-bg {
+    position: absolute;
+    bottom: -200px;
+    right: 0;
+  }
+}
+footer {
+  position: relative;
+  background: linear-gradient(
+    to top right,
+    rgb(25, 98, 255),
+    rgb(139, 185, 255)
+  );
+  .footer_bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .footer-content {
+    display: flex;
+    padding: 120px 20px;
+    justify-content: space-between;
+    &_element {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        @include font-set(700, 24px, 30px, #ffffff);
+        margin-bottom: 10px;
+      }
+      p {
+        @include font-set(400, 16px, 30px, #ffffff);
+        margin-bottom: 10px;
+      }
+      a {
+        @include font-set(400, 16px, 30px, #ffffff);
+      }
+    }
+  }
+}
