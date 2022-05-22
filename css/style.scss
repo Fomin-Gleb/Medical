@@ -1,5 +1,6 @@
 @import "mixins.scss";
 @import "templates.scss";
+@import "reset.scss";
 
 * {
   margin: 0;
@@ -14,6 +15,7 @@ body {
 .container {
   width: 1300px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 
 a {
