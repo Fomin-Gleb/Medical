@@ -210,6 +210,9 @@ section {
       width: 80%;
       margin: 0 auto;
       margin-bottom: 80px;
+      @include for-tablet-portrait-up {
+        width: 100%;
+      }
     }
     &_svg {
       text-align: center;
