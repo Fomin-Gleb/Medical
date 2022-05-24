@@ -673,9 +673,9 @@ section .services-content {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  cursor: pointer;
 }
 section .services-content_element {
+  cursor: pointer;
   padding: 40px;
   background-color: #ffffff;
   border-radius: 20px;
